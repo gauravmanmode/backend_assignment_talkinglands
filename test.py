@@ -38,7 +38,6 @@ multipoint_3bhk = {
 }
 
 # Multiple city regions in Bangalore as MultiPolygon
-# Multiple city regions in Bangalore as MultiPolygon (Fixed)
 multipolygon_bangalore = {
     "name": "Cities in Bangalore",
     "geojson": {
@@ -63,7 +62,7 @@ multipolygon_bangalore = {
     }
 }
 
-# Multiple city regions in Mumbai as MultiPolygon (Fixed)
+# Multiple city regions in Mumbai as MultiPolygon
 multipolygon_mumbai = {
     "name": "Cities in Mumbai",
     "geojson": {
@@ -90,39 +89,39 @@ multipolygon_mumbai = {
 
 
 def test_add_multipoints():
-    print("\n🟢 Adding 2BHK Properties...")
+    print("\n Adding 2BHK Properties...")
     response = requests.post(f"{BASE_URL}/add_multipoint", json=multipoint_2bhk)
     print(response.json())
 
-    print("\n🟢 Adding 3BHK Properties...")
+    print("\n Adding 3BHK Properties...")
     response = requests.post(f"{BASE_URL}/add_multipoint", json=multipoint_3bhk)
     print(response.json())
 
 
 def test_add_multipolygons():
-    print("\n🟢 Adding Cities in Bangalore...")
+    print("\n Adding Cities in Bangalore...")
     response = requests.post(f"{BASE_URL}/add_multipolygon", json=multipolygon_bangalore)
     print(response.json())
 
-    print("\n🟢 Adding Cities in Mumbai...")
+    print("\n Adding Cities in Mumbai...")
     response = requests.post(f"{BASE_URL}/add_multipolygon", json=multipolygon_mumbai)
     print(response.json())
 
 
 def test_get_multipoints():
-    print("\n🟢 Fetching MultiPoints (Properties)...")
+    print("\n Fetching MultiPoints (Properties)...")
     response = requests.get(f"{BASE_URL}/get_multipoints")
     print(json.dumps(response.json(), indent=4))
 
 
 def test_get_multipolygons():
-    print("\n🟢 Fetching MultiPolygons (Cities)...")
+    print("\n Fetching MultiPolygons (Cities)...")
     response = requests.get(f"{BASE_URL}/get_multipolygons")
     print(json.dumps(response.json(), indent=4))
 
 
 def test_find_properties_in_bangalore():
-    print("\n🟢 Finding Properties inside Bangalore Cities...")
+    print("\n Finding Properties inside Bangalore Cities...")
     # Assuming Bangalore Cities MultiPolygon has ID 1 in DB
     response = requests.get(f"{BASE_URL}/find_multipoints_inside/1")
     print(json.dumps(response.json(), indent=4))
