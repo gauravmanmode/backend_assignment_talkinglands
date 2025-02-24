@@ -4,7 +4,7 @@ based multiple point data and multiple polygon data .
 Backend: Flask, Flask-SQLAlchemy, GeoAlchemy2.  
 Database: PostgreSQL + PostGIS.  
 
-## API Endpoints  
+## REST API 
 
 ### MultiPoint (Properties)  
 - **Add:** `POST /add_multipoint`  
