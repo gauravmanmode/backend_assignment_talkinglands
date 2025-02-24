@@ -17,10 +17,11 @@ CREATE DATABASE spatial_db1;
 CREATE EXTENSION postgis;
 ```
 ## for password based auth with user test
+```
 sudo nano /etc/postgresql/15/main/pg_hba.conf
 change local   all   all   peer to 
        local   all   all   md5
-
+```
 
 ## create database
 python3 db_init.py
