@@ -1,0 +1,10 @@
+import os
+
+DB_HOST = "localhost"
+DB_NAME = "spatial_db1"
+DB_USER = "test"
+DB_PASSWORD = "123"
+DB_PORT = "5432"
+
+SQLALCHEMY_DATABASE_URI = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+SQLALCHEMY_TRACK_MODIFICATIONS = False
