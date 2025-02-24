@@ -14,7 +14,7 @@ change local   all   all   peer to
        local   all   all   md5
 ```
 
-## Set up database
+## set up database
 ```
 $sudo -u postgres psql
 CREATE USER test WITH PASSWORD '123';
@@ -28,7 +28,7 @@ CREATE EXTENSION postgis;
 ## create database
 python3 db_init.py
 
-## nstart the server
+## start the server
 python3 app.py
 
 ## testing 
