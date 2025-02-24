@@ -26,6 +26,7 @@ Database: PostgreSQL + PostGIS.
 ```
 
 python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 make sure postgresql is up and running and postgis is installed using
 sudo apt update
