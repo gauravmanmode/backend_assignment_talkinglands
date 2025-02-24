@@ -47,7 +47,7 @@ $sudo -u postgres psql
 CREATE USER test WITH PASSWORD '123';
 ALTER ROLE test WITH SUPERUSER;
 CREATE DATABASE spatial_db1;
-\c spatial_db
+\c spatial_db1
 CREATE EXTENSION postgis;
 ```
 
